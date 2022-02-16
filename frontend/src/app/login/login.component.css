@@ -1,0 +1,60 @@
+.main-div mat-card {
+    padding: 0px;
+    border-radius: 10px 10px 10px 10px ;
+    box-shadow: 20px 30px #3dbabac4;
+}
+.main-div mat-card:hover{
+    box-shadow: 30px 30px #efa032,
+    40px 40px #3dbabac4,
+    50px 50px #eb452b;
+    
+/* 
+    40px 40px rgba(71, 197, 197, 0.769),
+    50px 50px #64fafac4; */
+}
+.main-div{
+    margin-top: -170px;
+
+}
+mat-toolbar{
+    width: 100%;
+    background-color: #eb452b;
+    border-radius: 10px 10px 10px 10px ;
+}
+login-form{
+
+    border-radius: 50px 20px;
+}
+.login-form{
+    padding: 20px;
+}
+div{
+    background-color: #F6C291;
+}
+.hero h1{
+    padding-top: 60px;
+    padding-bottom: 50px;
+    font-size: 50px;
+	    text-align: center;
+      height:0;
+      line-height: 0;
+	    color: #fcedd8;
+	   	font-family: 'Niconne', cursive;
+	    font-weight: 700;
+      text-shadow: 5px 5px 0px #eb452b, 
+                  7px 6px 0px #efa032, 
+                  9px 7px 0px #46b59b, 
+                  11px 8px 0px #017e7f, 
+                  13px 9px 0px #F6C291, 
+                  15px 10px 0px #F6C291, 
+                  17px 11px 0px #F6C291, 
+                  19px 12px 0px #F6C291, 
+                  21px 13px 0px #F6C291;
+}
+.hero h1:hover{
+    font-size: 54px;
+}
+.login-button{
+    background-color: #46b59b;
+    color: white;
+}

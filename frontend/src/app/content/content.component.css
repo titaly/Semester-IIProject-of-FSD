@@ -1,0 +1,76 @@
+body{
+    background-color: #F6C291;
+}
+
+.table{
+    width: 86%;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+.hero{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 72px;
+
+}
+mat-table {border-radius: 20px 20px 20px 20px;}
+.hero h1{
+    padding-top: 30px;
+    padding-bottom: 50px;
+    font-size: 40px;
+	    text-align: center;
+      height:0;
+      line-height: 0;
+	    color: #fcedd8;
+	   	font-family: 'Niconne', cursive;
+	    font-weight: 700;
+      text-shadow: 5px 5px 0px #eb452b, 
+                  7px 6px 0px #efa032, 
+                  9px 7px 0px #46b59b, 
+                  11px 8px 0px #017e7f, 
+                  13px 9px 0px #F6C291, 
+                  15px 10px 0px #F6C291, 
+                  17px 11px 0px #F6C291, 
+                  19px 12px 0px #F6C291, 
+                  21px 13px 0px #F6C291;
+}
+.hero h1:hover{
+    font-size: 44px;
+}
+.create-button{
+    height: 50px;
+    margin-left: 40px;
+    background-color: #54d8b9;
+    color: white;
+}
+.logout-button{
+    height: 50px;
+    margin-left: 10px;
+    background-color: #eb452b;
+    color: white;
+}
+.search-div{
+    display: flex;
+}
+.card-header  {
+    background-color: black;
+    color: white;
+}
+.card-body{
+    background-color: #545252;
+    color: white;
+}
+.card-body a{
+    margin-left: 15px;
+}
+/* footer{
+    padding-top: 0px;
+} */
+.myfooter{
+    margin-top: 190px;
+}
+.card-footer{
+    background-color: black;
+    color: white;
+}

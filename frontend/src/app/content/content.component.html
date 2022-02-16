@@ -1,0 +1,95 @@
+<body>
+  <div class="hero">
+    <h1>MONII LIBRARY</h1>
+  </div>
+  <div class="search-div">
+      <button mat-raised-button (click) = "onAdd()" class="create-button">
+          <mat-icon>add</mat-icon> Create
+      </button>
+      <div class="search-bar">
+        <mat-form-field class="search-form-field" appearance="outline" >
+          <input matInput [(ngModel)]="searchKey" placeholder="Search" autocomplete="off" (keyup)="applyFilter()">
+          <button mat-button matSuffix mat-icon-button aria-label="Clear" *ngIf = "searchKey" (click)="onSearchClear()" >
+              <mat-icon>close</mat-icon>
+          </button>                               
+      </mat-form-field>
+      </div>
+      
+  
+      <button mat-raised-button (click)="loggedout()" class="logout-button">
+        <mat-icon>exit_to_app</mat-icon> Logout
+      </button>
+  </div>
+  
+  <div class="mat-elevation-z8 table" >
+      <mat-table [dataSource]="allBooks" matSort>
+  
+          <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+          </ng-container>
+        
+          <ng-container matColumnDef="title">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Title </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.title}} </mat-cell>
+          </ng-container>
+        
+          <ng-container matColumnDef="author">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Author </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.author}} </mat-cell>
+          </ng-container>
+        
+          <ng-container matColumnDef="category">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Category </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.category}} </mat-cell>
+          </ng-container>
+      
+          <ng-container matColumnDef="actions">
+              <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+              <mat-cell *matCellDef="let row">
+                <button mat-icon-button (click)="onAdd()"><mat-icon>launch</mat-icon></button>
+                <button mat-icon-button color="warn" (click)="deleteBook(row.id)"><mat-icon>delete_outline</mat-icon></button>
+              </mat-cell>
+          </ng-container>
+  
+  
+          <ng-container matColumnDef="noData">
+              <mat-footer-cell *matFooterCellDef colspan="6">
+                  No data.
+              </mat-footer-cell>
+          </ng-container>
+   
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          <mat-footer-row *matFooterRowDef="['noData']" [ngClass]="{'hide':(allBooks!=null)}"></mat-footer-row>
+  
+      </mat-table>
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="10" showFirstLastButtons></mat-paginator>
+  
+  </div>
+
+
+  <div class="myfooter">
+    <div class="card text-center">
+      <div class="card-header">
+        Get In Touch
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">MONII LIBRARY</h5>
+        <p class="card-text">By folllowing us, you are opting to receive infomation from MONII Nation  <br>with news, special offers and messages tailored to your interests.</p>
+        <a href="https://github.com/titaly" target="_blank" class="btn btn-primary" style="background-color: #4267B2; border: 0;"><i class="fi-snsuxl-facebook"></i></a>
+        <a href="https://github.com/titaly" target="_blank" class="btn btn-primary" style="background-color: #171515; border: 0;"><i class="fi-snsuxl-github-alt"></i></a>
+        <a href="https://github.com/titaly" target="_blank" class="btn btn-primary" style="background-color: #00acee; border: 0;"><i class="fi-snsuxl-twitter-solid"></i></a>
+        <a href="mailto:maotimng20@kit.edu.kh"  class="btn btn-primary" style="background-color: rgb(197, 20, 20); border: 0;"><i class="fi-xwsuxl-envelope-solid"></i></a>
+      </div>
+      <div class="card-footer text-muted">
+        <p>&copy;2022</p>
+      </div>
+    </div>
+  </div>
+  
+</body>
+
+
+  
+  

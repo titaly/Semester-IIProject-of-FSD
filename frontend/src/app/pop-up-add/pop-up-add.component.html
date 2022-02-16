@@ -1,0 +1,30 @@
+<form [formGroup]="userForm" (ngSubmit)="createBook()">
+    <mat-grid-list cols="1" rowHeight="300px">
+        <mat-grid-tile>
+            <div class="controles-container">
+                <input type="hidden">
+                <mat-form-field>
+                    <input formControlName="id" matInput placeholder="Enter the id" class="form-control">
+                    <mat-error>This field is required.</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="title" matInput placeholder="Enter the title" class="form-control">
+                    <mat-error>This field is required.</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="author" matInput placeholder="Enter the author name" class="form-control">
+                    <mat-error>This field is required.</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input formControlName="category" matInput placeholder="Enter the category" class="form-control">
+                    <mat-error>This field is required.</mat-error>
+                </mat-form-field>
+                <div mat-dialog-actions class="button-row">
+                    <button mat-raised-button style="background-color:#46b59b ; color: white;" type="submit" [disabled] = "userForm.invalid">Add Book</button>
+                    <button mat-raised-button style="margin-left: 10px;" (click)="onCancel()" mat-dialog-close="false">Cancel</button>
+                </div>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <strong>{{msg}}</strong>
+</form>

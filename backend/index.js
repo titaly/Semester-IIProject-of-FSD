@@ -7,7 +7,6 @@ const app = express();
 app.use(cors());
 app.use(bodyparser.json());
 
-
 // database connection
 const db = mysql.createConnection({
     host: 'database-2.c9qwjlfgnuw4.ap-southeast-1.rds.amazonaws.com',
@@ -117,7 +116,7 @@ app.put('/allbooks/:id', (req, res) => {
     let category = req.body.category;
 
     
-    qr += `update allbooks set title = '${title}' where id = ${getID}`;
+    qr += `update allbooks set title = '${title} author = '${author} category = '${category} where id = ${getID}`;
 
     db.query(qr, (err, result) => {
         if (err){
